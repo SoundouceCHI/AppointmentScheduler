@@ -1,0 +1,30 @@
+C:\Users\DevInfo\Nouveau dossier\Appointment Scheduler\Appointment Scheduler\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\DevInfo\Nouveau dossier\Appointment Scheduler\Appointment Scheduler\bin\Debug\net8.0\appsettings.json
+C:\Users\DevInfo\Nouveau dossier\Appointment Scheduler\Appointment Scheduler\bin\Debug\net8.0\Appointment Scheduler.staticwebassets.runtime.json
+C:\Users\DevInfo\Nouveau dossier\Appointment Scheduler\Appointment Scheduler\bin\Debug\net8.0\Appointment Scheduler.exe
+C:\Users\DevInfo\Nouveau dossier\Appointment Scheduler\Appointment Scheduler\bin\Debug\net8.0\Appointment Scheduler.deps.json
+C:\Users\DevInfo\Nouveau dossier\Appointment Scheduler\Appointment Scheduler\bin\Debug\net8.0\Appointment Scheduler.runtimeconfig.json
+C:\Users\DevInfo\Nouveau dossier\Appointment Scheduler\Appointment Scheduler\bin\Debug\net8.0\Appointment Scheduler.dll
+C:\Users\DevInfo\Nouveau dossier\Appointment Scheduler\Appointment Scheduler\bin\Debug\net8.0\Appointment Scheduler.pdb
+C:\Users\DevInfo\Nouveau dossier\Appointment Scheduler\Appointment Scheduler\obj\Debug\net8.0\Appointment Scheduler.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DevInfo\Nouveau dossier\Appointment Scheduler\Appointment Scheduler\obj\Debug\net8.0\Appointment Scheduler.AssemblyInfoInputs.cache
+C:\Users\DevInfo\Nouveau dossier\Appointment Scheduler\Appointment Scheduler\obj\Debug\net8.0\Appointment Scheduler.AssemblyInfo.cs
+C:\Users\DevInfo\Nouveau dossier\Appointment Scheduler\Appointment Scheduler\obj\Debug\net8.0\Appointment Scheduler.csproj.CoreCompileInputs.cache
+C:\Users\DevInfo\Nouveau dossier\Appointment Scheduler\Appointment Scheduler\obj\Debug\net8.0\Appointment Scheduler.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\DevInfo\Nouveau dossier\Appointment Scheduler\Appointment Scheduler\obj\Debug\net8.0\Appointment Scheduler.RazorAssemblyInfo.cache
+C:\Users\DevInfo\Nouveau dossier\Appointment Scheduler\Appointment Scheduler\obj\Debug\net8.0\Appointment Scheduler.RazorAssemblyInfo.cs
+C:\Users\DevInfo\Nouveau dossier\Appointment Scheduler\Appointment Scheduler\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\DevInfo\Nouveau dossier\Appointment Scheduler\Appointment Scheduler\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\DevInfo\Nouveau dossier\Appointment Scheduler\Appointment Scheduler\obj\Debug\net8.0\staticwebassets\msbuild.Appointment Scheduler.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\DevInfo\Nouveau dossier\Appointment Scheduler\Appointment Scheduler\obj\Debug\net8.0\staticwebassets\msbuild.build.Appointment Scheduler.props
+C:\Users\DevInfo\Nouveau dossier\Appointment Scheduler\Appointment Scheduler\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Appointment Scheduler.props
+C:\Users\DevInfo\Nouveau dossier\Appointment Scheduler\Appointment Scheduler\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Appointment Scheduler.props
+C:\Users\DevInfo\Nouveau dossier\Appointment Scheduler\Appointment Scheduler\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\DevInfo\Nouveau dossier\Appointment Scheduler\Appointment Scheduler\obj\Debug\net8.0\scopedcss\bundle\Appointment Scheduler.styles.css
+C:\Users\DevInfo\Nouveau dossier\Appointment Scheduler\Appointment Scheduler\obj\Debug\net8.0\scopedcss\projectbundle\Appointment Scheduler.bundle.scp.css
+C:\Users\DevInfo\Nouveau dossier\Appointment Scheduler\Appointment Scheduler\obj\Debug\net8.0\Appointment Scheduler.dll
+C:\Users\DevInfo\Nouveau dossier\Appointment Scheduler\Appointment Scheduler\obj\Debug\net8.0\refint\Appointment Scheduler.dll
+C:\Users\DevInfo\Nouveau dossier\Appointment Scheduler\Appointment Scheduler\obj\Debug\net8.0\Appointment Scheduler.pdb
+C:\Users\DevInfo\Nouveau dossier\Appointment Scheduler\Appointment Scheduler\obj\Debug\net8.0\Appointment Scheduler.genruntimeconfig.cache
+C:\Users\DevInfo\Nouveau dossier\Appointment Scheduler\Appointment Scheduler\obj\Debug\net8.0\ref\Appointment Scheduler.dll
+C:\Users\DevInfo\Nouveau dossier\Appointment Scheduler\Appointment Scheduler\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
