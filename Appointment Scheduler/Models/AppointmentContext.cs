@@ -4,8 +4,8 @@ namespace Appointment_Scheduler.Models
 {
     public class AppointmentContext : DbContext
     {
-        public DbSet<Appointment> appointments { get; set; }
-        public DbSet<UserApp> users { get; set; }                                             
+        public DbSet<Appointment> Appointments { get; set; }
+        public DbSet<UserApp> Users { get; set; }                                             
 
         public AppointmentContext(DbContextOptions<AppointmentContext> options) : base(options) {
         
