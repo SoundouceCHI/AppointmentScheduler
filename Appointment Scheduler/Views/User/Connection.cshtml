@@ -1,0 +1,17 @@
+﻿@model UserApp
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="text-center">
+    <h1>Connexion</h1>
+    <form asp-action="User" asp-action="UserConnection" method="post">
+            <label for="username">Nom d'utilisateur :</label>
+            <input asp-for=UserName type="text" id="username" name="username" required>
+       
+            <label for="password">Mot de passe :</label>
+            <input asp-for=pwd type="password" id="password" name="password" required>
+            <button type="submit">Se connecter</button>
+    </form>
+</div>
