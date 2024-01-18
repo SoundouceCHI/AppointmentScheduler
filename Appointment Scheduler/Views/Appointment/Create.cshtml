@@ -1,0 +1,27 @@
+﻿@model Appointment 
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+
+}
+
+<div> 
+    <form asp-controller="Appointment" asp-action="Post" method="post">
+        <label for="title">Titre:</label><br>
+        <input type="text" id="title" name="Title" required><br>
+
+        <label for="description">Description:</label><br>
+        <textarea id="description" name="Description" required></textarea><br>
+        !!
+        <label for="startDate">Date de début:</label><br>
+        <input type="datetime-local" id="startDate" name="StartDate" required><br>
+
+        <label for="endDate">Date de fin:</label><br>
+        <input type="datetime-local" id="endDate" name="EndDate" required><br>
+
+        <input type="hidden" type="number" id="userAppId" name="UserAppId" value=@Model.UserAppId><br>
+
+        <input type="submit" value="Ajouter le Rendez-Vous">
+    </form>
+</div>

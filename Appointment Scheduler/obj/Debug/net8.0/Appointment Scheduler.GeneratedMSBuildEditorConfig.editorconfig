@@ -18,6 +18,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\DevInfo\Nouveau dossier\Appointment Scheduler\Appointment Scheduler
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/DevInfo/Nouveau dossier/Appointment Scheduler/Appointment Scheduler/Views/Appointment/Appointment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRcQXBwb2ludG1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DevInfo/Nouveau dossier/Appointment Scheduler/Appointment Scheduler/Views/Appointment/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DevInfo/Nouveau dossier/Appointment Scheduler/Appointment Scheduler/Views/Appointment/GetAllById.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRcR2V0QWxsQnlJZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/DevInfo/Nouveau dossier/Appointment Scheduler/Appointment Scheduler/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -36,6 +48,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/DevInfo/Nouveau dossier/Appointment Scheduler/Appointment Scheduler/Views/User/Connection.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxDb25uZWN0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DevInfo/Nouveau dossier/Appointment Scheduler/Appointment Scheduler/Views/User/CreateAppointmentView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxDcmVhdGVBcHBvaW50bWVudFZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/DevInfo/Nouveau dossier/Appointment Scheduler/Appointment Scheduler/Views/User/Index.cshtml]

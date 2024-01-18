@@ -21,7 +21,14 @@ namespace Appointment_Scheduler.Controllers
         public IActionResult Profile(int id)
         {
             var user = _context.Users.FirstOrDefault(u => u.Id == id);
-            return View(user);
+            var apptMnt = _context.Appointments.Where(a => a.UserAppId == id).ToList();
+            apptMnt = apptMnt == null ? new List<Appointment>() : apptMnt;
+            var viewModel = new UserProfileViewModel
+            {
+                UserApp = user,
+                Appointments = apptMnt
+            };
+            return View(viewModel);
         }
         [HttpGet]
         public IActionResult Registration()
@@ -58,6 +65,31 @@ namespace Appointment_Scheduler.Controllers
                 return RedirectToAction("Connection", userApp); 
             }
             return RedirectToAction("Profile", new { id = userLog.Id});
+        }
+
+
+        public IActionResult CreateAppointmentView(int userId)
+        {
+            var appt = new Appointment();
+            appt.UserAppId = userId; 
+            return View(appt);
+        }
+        public IActionResult CreateAppt(Appointment appts)
+        {
+            int lastId=0; 
+            if (ModelState.IsValid)
+            {
+                if (appts.StartDate > appts.EndDate)
+                {
+                    ModelState.AddModelError("EndDate", "La date de fin doit être après la date de début.");
+                    return View("CreateAppointmentView", appts);
+                }
+                _context.Appointments.Add(appts);
+                _context.SaveChanges();
+                lastId = appts.UserAppId; 
+            }
+            lastId = appts.UserAppId; 
+            return RedirectToAction("Profile", new { id = lastId });
         }
     }
 }
