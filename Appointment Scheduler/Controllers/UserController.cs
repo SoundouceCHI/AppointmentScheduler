@@ -1,4 +1,5 @@
 ﻿using Appointment_Scheduler.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Appointment_Scheduler.Controllers
@@ -18,8 +19,13 @@ namespace Appointment_Scheduler.Controllers
             return View();
         }
         [HttpGet]
-        public IActionResult Profile(int id)
+        public IActionResult Profile()
         {
+            int? id = HttpContext.Session.GetInt32("UserAppId"); 
+            if (id == null)
+            {
+                return RedirectToAction("Index", "Home"); 
+            }
             var user = _context.Users.FirstOrDefault(u => u.Id == id);
             var apptMnt = _context.Appointments.Where(a => a.UserAppId == id).ToList();
             apptMnt = apptMnt == null ? new List<Appointment>() : apptMnt;
@@ -51,6 +57,7 @@ namespace Appointment_Scheduler.Controllers
                 _context.Users.Add(userApp);
                 _context.SaveChanges();
                 int lastId = userApp.Id;
+                HttpContext.Session.SetInt32("UserAppId", lastId);
                 return RedirectToAction("Profile", new { id = lastId } );
             }
             return View("Registration", userApp);
@@ -62,11 +69,18 @@ namespace Appointment_Scheduler.Controllers
             var userLog = _context.Users.FirstOrDefault(u => u.UserName == userApp.UserName);
             if (userLog == null || userApp.pwd != userLog.pwd )
             {
-                return RedirectToAction("Connection", userApp); 
+                return RedirectToAction("Connection", userLog); 
             }
+
+            HttpContext.Session.SetInt32("UserAppId", userLog.Id);
             return RedirectToAction("Profile", new { id = userLog.Id});
         }
 
+        public IActionResult UserLogout()
+        {
+            HttpContext.Session.Remove("UserAppId");
+            return RedirectToAction("Index", "Home"); 
+        }
 
         public IActionResult CreateAppointmentView(int userId)
         {
@@ -76,7 +90,6 @@ namespace Appointment_Scheduler.Controllers
         }
         public IActionResult CreateAppt(Appointment appts)
         {
-            int lastId=0; 
             if (ModelState.IsValid)
             {
                 if (appts.StartDate > appts.EndDate)
@@ -86,10 +99,9 @@ namespace Appointment_Scheduler.Controllers
                 }
                 _context.Appointments.Add(appts);
                 _context.SaveChanges();
-                lastId = appts.UserAppId; 
             }
-            lastId = appts.UserAppId; 
-            return RedirectToAction("Profile", new { id = lastId });
+      
+            return RedirectToAction("Profile");
         }
     }
 }

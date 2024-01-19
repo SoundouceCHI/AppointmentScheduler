@@ -15,17 +15,19 @@ namespace Appointment_Scheduler.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            int? id = HttpContext.Session.GetInt32("UserAppId");
+            if (id == null)
+            {
+                return View();
+            }
+            return RedirectToAction("Profile", "User");
         }
 
         public IActionResult Privacy()
         {
             return View();
         }
-        public IActionResult Registration()
-        {
-            return View();
-        }
+       
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
