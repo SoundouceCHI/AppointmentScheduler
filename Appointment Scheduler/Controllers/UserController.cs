@@ -85,20 +85,32 @@ namespace Appointment_Scheduler.Controllers
         public IActionResult CreateAppointmentView(int userId)
         {
             var appt = new Appointment();
-            appt.UserAppId = userId; 
+            appt.UserAppId = userId;
+            appt.StartDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, 0, 0); 
+            appt.EndDate = appt.StartDate.AddMinutes(10); 
             return View(appt);
         }
         public IActionResult CreateAppt(Appointment appts)
         {
             if (ModelState.IsValid)
             {
-                if (appts.StartDate > appts.EndDate)
+                var startDate = new DateTime(appts.StartDate.Year, appts.StartDate.Month, appts.StartDate.Day, appts.StartDate.Hour, appts.StartDate.Minute, 0);
+                var systemDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, 0);
+
+                if (startDate <=  systemDate || (appts.StartDate > appts.EndDate) )
                 {
-                    ModelState.AddModelError("EndDate", "La date de fin doit être après la date de début.");
+                    ModelState.AddModelError("EndDate", "Impossible d'enregistrer des rendez-vous pour cette date.");
                     return View("CreateAppointmentView", appts);
                 }
                 _context.Appointments.Add(appts);
-                _context.SaveChanges();
+
+
+
+
+
+
+
+               _context.SaveChanges();
             }
       
             return RedirectToAction("Profile");
