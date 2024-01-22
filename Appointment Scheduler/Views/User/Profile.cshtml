@@ -18,6 +18,9 @@
             <div>
                 <h4>@appointment.Title</h4>
                 <p>Date du Rendez-vous: @appointment.StartDate</p>
+                <a asp-controller="User" asp-action="UpdateAppointmentView" asp-route-apptId=@appointment.Id>Update Appointment</a>
+                <a href="javascript:void(0)" onclick="confirmDelete(@appointment.Id)">Delete</a>
+
             </div>
         }
 
@@ -26,6 +29,13 @@
     {
         <p>Aucun rdv enregistré</p>
     }
+    <script>
+        function confirmDelete(apptId) {
+            if (confirm("Êtes-vous sûr de vouloir supprimer ce rendez-vous ?")) {
+                window.location.href = '/User/DeleteAppointment?apptId=' + apptId;
+            }
+        }
+    </script>
 
     <a asp-controller="User" asp-action="CreateAppointmentView" asp-route-userId=@Model.UserApp.Id>Create</a>
 </div>

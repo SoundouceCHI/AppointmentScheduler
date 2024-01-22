@@ -1,4 +1,5 @@
 using Appointment_Scheduler.Models;
+using Appointment_Scheduler.Services;
 using Microsoft.EntityFrameworkCore;
 using System;
 
@@ -18,6 +19,8 @@ builder.Services.AddSession(options =>
     options.Cookie.HttpOnly = true; 
     options.Cookie.IsEssential = true; 
 });
+builder.Services.AddScoped<AppointmentService>();
+builder.Services.AddHostedService<TimerService>();
 
 var app = builder.Build();
 

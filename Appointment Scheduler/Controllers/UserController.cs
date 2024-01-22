@@ -90,7 +90,7 @@ namespace Appointment_Scheduler.Controllers
             appt.EndDate = appt.StartDate.AddMinutes(10); 
             return View(appt);
         }
-        public IActionResult CreateAppt(Appointment appts)
+        public IActionResult CreateAppt(Appointment appts) 
         {
             if (ModelState.IsValid)
             {
@@ -103,17 +103,41 @@ namespace Appointment_Scheduler.Controllers
                     return View("CreateAppointmentView", appts);
                 }
                 _context.Appointments.Add(appts);
-
-
-
-
-
-
-
-               _context.SaveChanges();
+                _context.SaveChanges();
             }
       
             return RedirectToAction("Profile");
+        }
+        public IActionResult UpdateAppointmentView(int apptId)
+        {
+            var appt = _context.Appointments.FirstOrDefault(a => a.Id == apptId);
+            return View(appt);
+        }
+        public IActionResult UpdateAppointment(Appointment updatedAppt)
+        {
+            var appt = _context.Appointments.FirstOrDefault(a => a.Id == updatedAppt.Id);
+            if (appt == null)
+            {
+                return NotFound();
+            }
+            appt.StartDate = updatedAppt.StartDate;
+            appt.EndDate = updatedAppt.EndDate;
+            appt.Title = updatedAppt.Title;
+            appt.Description = updatedAppt.Description;
+
+            _context.SaveChanges();
+            return RedirectToAction("UpdateAppointmentView", new { apptId = appt.Id });
+        }
+        public IActionResult DeleteAppointment(int apptId)
+        {
+            var appt = _context.Appointments.FirstOrDefault(a=> a.Id == apptId);
+            if(appt != null)
+            {
+                _context.Appointments.Remove(appt); 
+                _context.SaveChanges();
+                return RedirectToAction("Profile");
+            }
+            return NoContent();
         }
     }
 }
